@@ -686,6 +686,49 @@ body {
   z-index: 1;
 }
 
+.hero-logo {
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rifu-icon {
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent), var(--color-primary));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rifuIconShine 3s ease-in-out infinite, rifuIconFloat 4s ease-in-out infinite;
+  text-shadow: 0 0 50px rgba(229, 51, 138, 0.3);
+  position: relative;
+}
+
+.rifu-icon::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(229, 51, 138, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rifuIconGlow 3s ease-in-out infinite;
+}
+
+.rifu-subtitle {
+  font-family: var(--font-satoshi);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--color-gray-700);
+  opacity: 0.8;
+}
+
 .hero-title {
   margin-bottom: var(--space-8);
 }
@@ -1845,6 +1888,35 @@ section {
   }
 }
 
+@keyframes rifuIconShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rifuIconFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+@keyframes rifuIconGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .events-content {
@@ -1973,6 +2045,15 @@ section {
 
   .nav-container {
     padding: 0 var(--space-3);
+  }
+
+  .rifu-icon {
+    font-size: 3.5rem;
+  }
+
+  .rifu-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
   }
 
   .hero-content {
