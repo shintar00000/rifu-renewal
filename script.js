@@ -43,7 +43,7 @@ function initializeLoading() {
         ];
         
         let currentStep = 0;
-        const stepDuration = 300; // Each step takes 300ms
+        const stepDuration = 500; // Each step takes 500ms for longer display
         
         function updateLoadingProgress() {
             if (currentStep < loadingSteps.length) {
@@ -73,7 +73,7 @@ function initializeLoading() {
                         setTimeout(() => {
                             loadingScreen.style.display = 'none';
                         }, 500);
-                    }, 300);
+                    }, 500);
                 }
             }
         }

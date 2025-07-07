@@ -156,28 +156,48 @@ body {
   animation: subtitleFade 2s ease-in-out infinite alternate;
 }
 
-/* キャッチコピー */
-.loading-catchphrase {
+/* メインメッセージ */
+.loading-message {
   margin: var(--space-8) 0;
   font-family: var(--font-primary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.catchphrase-text {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: var(--space-2);
-  opacity: 0;
-  animation: catchphraseSlideIn 1.5s ease-out 0.5s forwards;
-}
-
-.catchphrase-thanks {
+.message-line {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-accent);
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
   opacity: 0;
-  animation: catchphraseSlideIn 1.5s ease-out 1s forwards, thanksGlow 2s ease-in-out 2s infinite;
+  transform: translateY(20px);
+}
+
+.message-line-1 {
+  color: var(--color-white);
+  animation: messageSlideIn 1.2s ease-out 0.5s forwards;
+}
+
+.message-line-2 {
+  color: var(--color-accent);
+  animation: messageSlideIn 1.2s ease-out 0.8s forwards, messageGlow 3s ease-in-out 2s infinite;
+}
+
+.message-description {
+  margin-top: var(--space-6);
+  opacity: 0;
+  animation: descriptionFadeIn 1.5s ease-out 1.5s forwards;
+}
+
+.description-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* カッコいいローディングアニメーション */
@@ -350,7 +370,7 @@ body {
   }
 }
 
-@keyframes catchphraseSlideIn {
+@keyframes messageSlideIn {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -361,12 +381,23 @@ body {
   }
 }
 
-@keyframes thanksGlow {
+@keyframes messageGlow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(255, 216, 77, 0.5);
+    text-shadow: 0 0 15px rgba(255, 216, 77, 0.5);
   }
   50% {
-    text-shadow: 0 0 20px rgba(255, 216, 77, 0.8), 0 0 30px rgba(255, 216, 77, 0.6);
+    text-shadow: 0 0 25px rgba(255, 216, 77, 0.8), 0 0 35px rgba(255, 216, 77, 0.6);
+  }
+}
+
+@keyframes descriptionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1187,6 +1218,41 @@ section {
 /* Blog Section */
 .blog {
   background: var(--color-white);
+  padding: var(--space-24) 0;
+}
+
+.daily-catchphrase {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  font-family: var(--font-primary);
+}
+
+.daily-catchphrase .catchphrase-text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-1);
+}
+
+.daily-catchphrase .catchphrase-thanks {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.daily-catchphrase .catchphrase-thanks::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-full);
 }
 
 .blog-grid {
