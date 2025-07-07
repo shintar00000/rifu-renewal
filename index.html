@@ -3,27 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>里風総合型クラブ上牧 | 奈良県上牧町のスポーツクラブ</title>
+    <title>里風総合型クラブ上牧 | 奈良県上牧町のスポーツ・健康クラブ</title>
+    <meta name="description" content="奈良県上牧町の総合型地域スポーツクラブ。子どもから高齢者まで、幅広い年齢層の方々に運動の楽しさをお届けします。">
+    <meta name="keywords" content="スポーツクラブ,上牧町,奈良県,健康,運動,子ども,シニア,体験,教室">
+    
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="里風総合型クラブ上牧">
+    <meta property="og:description" content="奈良県上牧町の総合型地域スポーツクラブ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rifu-kanmaki.com">
+    <meta property="og:image" content="https://rifu-kanmaki.com/assets/ogp-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="里風総合型クラブ上牧">
+    <meta name="twitter:description" content="奈良県上牧町の総合型地域スポーツクラブ">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "里風総合型クラブ上牧",
+      "description": "奈良県上牧町の総合型地域スポーツクラブ",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "上牧3000番地",
+        "addressLocality": "上牧町",
+        "addressRegion": "奈良県",
+        "postalCode": "639-0214",
+        "addressCountry": "JP"
+      },
+      "telephone": "0745-76-1234",
+      "email": "info@rifu-kanmaki.com",
+      "url": "https://rifu-kanmaki.com"
+    }
+    </script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h1>里風</h1>
+                <span>RIFU</span>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p>読み込み中...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
     <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="メインナビゲーション">
             <div class="nav-container">
                 <div class="logo">
-                    <h1>里風<span class="highlight">総合型クラブ上牧</span></h1>
+                    <h1>
+                        <span class="logo-main">里風</span>
+                        <span class="logo-sub">総合型クラブ上牧</span>
+                    </h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">ホーム</a></li>
-                    <li><a href="#about">クラブについて</a></li>
-                    <li><a href="#activities">活動内容</a></li>
-                    <li><a href="#schedule">スケジュール</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">ホーム</a></li>
+                    <li role="none"><a href="#classes" role="menuitem">教室案内</a></li>
+                    <li role="none"><a href="#events" role="menuitem">イベント</a></li>
+                    <li role="none"><a href="#blog" role="menuitem">お知らせ</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">お問い合わせ</a></li>
+                    <li role="none"><a href="#" class="lang-toggle" role="menuitem" aria-label="Language toggle">EN</a></li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburger" aria-label="メニューを開く" tabindex="0" role="button">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,188 +101,497 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="banner">
         <div class="hero-background">
+            <div class="hero-sns-visual">
+                <!-- SNSアイコン風のメインビジュアル -->
+                <div class="sns-icon-grid">
+                    <div class="sns-icon sns-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="sns-icon sns-line">
+                        <i class="fab fa-line"></i>
+                    </div>
+                    <div class="sns-icon sns-facebook">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="sns-icon sns-twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="hero-title-main">里風総合型クラブ上牧</span>
-                <span class="hero-title-sub">健康で活力ある地域づくりを目指して</span>
+                <span class="hero-title-main" data-aos="fade-up">健康で活力ある</span>
+                <span class="hero-title-highlight" data-aos="fade-up" data-aos-delay="200">地域づくりを目指して</span>
             </h1>
-            <p class="hero-description">
-                奈良県上牧町で地域の皆様に愛されるスポーツクラブとして、
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                奈良県上牧町で地域の皆様に愛されるスポーツクラブとして、<br>
                 幅広い年齢層の方々に運動の楽しさをお届けしています。
             </p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">詳しく見る</a>
-                <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="#classes" class="btn btn-primary">
+                    <span>教室を見る</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>体験申込</span>
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-label">参加者数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">教室数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">年の実績</span>
+                </div>
             </div>
         </div>
-        <div class="hero-scroll">
+        <div class="hero-scroll" aria-label="下にスクロール">
+            <span>Scroll Down</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Classes Section -->
+    <section id="classes" class="classes" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2>クラブについて</h2>
-                <p>地域に根ざした総合型スポーツクラブとして</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>教室案内</h2>
+                <p>年齢や体力に応じた多彩なプログラムをご用意</p>
             </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-heart"></i>
+            
+            <!-- Filter & Search -->
+            <div class="classes-filter" data-aos="fade-up" data-aos-delay="200">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="day-filter">曜日で絞り込み</label>
+                        <select id="day-filter" class="filter-select">
+                            <option value="">すべて</option>
+                            <option value="月">月曜日</option>
+                            <option value="火">火曜日</option>
+                            <option value="水">水曜日</option>
+                            <option value="木">木曜日</option>
+                            <option value="金">金曜日</option>
+                            <option value="土">土曜日</option>
+                            <option value="日">日曜日</option>
+                        </select>
                     </div>
-                    <h3>健康づくり</h3>
-                    <p>年齢や体力に関係なく、みんなが楽しめる運動プログラムを提供します。</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="filter-group">
+                        <label for="target-filter">対象年齢</label>
+                        <select id="target-filter" class="filter-select">
+                            <option value="">すべて</option>
+                            <option value="子ども">子ども</option>
+                            <option value="大人">大人</option>
+                            <option value="シニア">シニア</option>
+                            <option value="親子">親子</option>
+                        </select>
                     </div>
-                    <h3>コミュニティ</h3>
-                    <p>地域住民の皆様が集い、交流を深める場として機能します。</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-star"></i>
+                    <div class="search-group">
+                        <input type="text" id="class-search" placeholder="教室名で検索..." class="search-input">
+                        <i class="fas fa-search"></i>
                     </div>
-                    <h3>多様性</h3>
-                    <p>様々なスポーツ・運動プログラムで多様なニーズにお応えします。</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Activities Section -->
-    <section id="activities" class="activities">
-        <div class="container">
-            <div class="section-header">
-                <h2>活動内容</h2>
-                <p>豊富なプログラムで健康づくりをサポート</p>
-            </div>
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <div class="activity-image">
-                        <i class="fas fa-running"></i>
+            <!-- Classes Grid -->
+            <div class="classes-grid" data-aos="fade-up" data-aos-delay="400">
+                <article class="class-card" data-day="火木" data-target="大人" data-name="ランニング・ウォーキング">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="class-badge">人気</div>
                     </div>
-                    <div class="activity-content">
+                    <div class="class-card-content">
                         <h3>ランニング・ウォーキング</h3>
-                        <p>初心者から上級者まで、レベルに応じたランニング・ウォーキングプログラムを実施しています。</p>
-                        <ul class="activity-features">
-                            <li>毎週火曜日・木曜日</li>
-                            <li>朝7:00〜8:30</li>
-                            <li>上牧町内コース</li>
-                        </ul>
+                        <p class="class-description">初心者から上級者まで、レベルに応じたランニング・ウォーキングプログラム</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>火・木曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7:00-8:30</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>大人向け</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額3,000円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">体力向上</span>
+                            <span class="tag">健康維持</span>
+                        </div>
                     </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-image">
-                        <i class="fas fa-dumbbell"></i>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="running">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="running">体験申込</button>
                     </div>
-                    <div class="activity-content">
+                </article>
+
+                <article class="class-card" data-day="月水金" data-target="大人" data-name="フィットネス">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="class-card-content">
                         <h3>フィットネス</h3>
-                        <p>筋力トレーニングやエアロビクスなど、体力向上を目的としたプログラムです。</p>
-                        <ul class="activity-features">
-                            <li>毎週月曜日・水曜日・金曜日</li>
-                            <li>夜7:00〜9:00</li>
-                            <li>上牧町体育館</li>
-                        </ul>
+                        <p class="class-description">筋力トレーニングやエアロビクスで体力向上を目指します</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>月・水・金曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>19:00-21:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>大人向け</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額4,000円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">筋力強化</span>
+                            <span class="tag">エアロビクス</span>
+                        </div>
                     </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-image">
-                        <i class="fas fa-volleyball-ball"></i>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="fitness">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="fitness">体験申込</button>
                     </div>
-                    <div class="activity-content">
+                </article>
+
+                <article class="class-card" data-day="土" data-target="大人" data-name="バレーボール">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-volleyball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="class-card-content">
                         <h3>バレーボール</h3>
-                        <p>チームスポーツを通じて体力向上と仲間づくりを楽しめます。</p>
-                        <ul class="activity-features">
-                            <li>毎週土曜日</li>
-                            <li>午後2:00〜5:00</li>
-                            <li>上牧町体育館</li>
-                        </ul>
+                        <p class="class-description">チームスポーツを通じて体力向上と仲間づくりを楽しめます</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>土曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>14:00-17:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>大人向け</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額3,500円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">チームワーク</span>
+                            <span class="tag">楽しい</span>
+                        </div>
+                    </div>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="volleyball">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="volleyball">体験申込</button>
+                    </div>
+                </article>
+
+                <article class="class-card" data-day="日" data-target="大人シニア" data-name="ヨガ・ストレッチ">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="class-badge">おすすめ</div>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>ヨガ・ストレッチ</h3>
+                        <p class="class-description">心身のバランスを整え、リラックス効果も期待できます</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>日曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10:00-11:30</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>大人・シニア</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額2,500円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">リラックス</span>
+                            <span class="tag">柔軟性</span>
+                        </div>
+                    </div>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="yoga">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="yoga">体験申込</button>
+                    </div>
+                </article>
+
+                <article class="class-card" data-day="土" data-target="子ども" data-name="キッズ体操">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="class-badge">新規</div>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>キッズ体操</h3>
+                        <p class="class-description">楽しく体を動かしながら基礎体力と運動能力を育てます</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>土曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>9:00-10:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>3-12歳</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額2,000円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">運動能力向上</span>
+                            <span class="tag">楽しい</span>
+                        </div>
+                    </div>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="kids">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="kids">体験申込</button>
+                    </div>
+                </article>
+
+                <article class="class-card" data-day="水" data-target="シニア" data-name="シニア健康教室">
+                    <div class="class-card-header">
+                        <div class="class-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>シニア健康教室</h3>
+                        <p class="class-description">無理なく続けられる運動で健康寿命を延ばしましょう</p>
+                        <div class="class-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>水曜日</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10:00-11:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>60歳以上</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-yen-sign"></i>
+                                <span>月額1,500円</span>
+                            </div>
+                        </div>
+                        <div class="class-tags">
+                            <span class="tag">健康寿命</span>
+                            <span class="tag">無理なく</span>
+                        </div>
+                    </div>
+                    <div class="class-card-footer">
+                        <button class="btn btn-outline class-detail-btn" data-class="senior">詳細を見る</button>
+                        <button class="btn btn-primary class-apply-btn" data-class="senior">体験申込</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>イベント・カレンダー</h2>
+                <p>今月の予定をチェックして、参加してみませんか？</p>
+            </div>
+            
+            <div class="events-content" data-aos="fade-up" data-aos-delay="200">
+                <!-- Calendar -->
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" id="prev-month">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 class="calendar-title" id="calendar-title">2025年7月</h3>
+                        <button class="calendar-nav" id="next-month">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- カレンダーがJavaScriptで生成されます -->
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="activity-image">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h3>ヨガ・ストレッチ</h3>
-                        <p>心身のバランスを整え、リラックス効果も期待できるプログラムです。</p>
-                        <ul class="activity-features">
-                            <li>毎週日曜日</li>
-                            <li>午前10:00〜11:30</li>
-                            <li>上牧町公民館</li>
-                        </ul>
+
+                <!-- Upcoming Events -->
+                <div class="upcoming-events">
+                    <h3>今後の予定</h3>
+                    <div class="event-list">
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="event-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">7月</span>
+                            </div>
+                            <div class="event-content">
+                                <h4>夏祭り体験会</h4>
+                                <p>地域の夏祭りで各教室の体験会を開催します</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 10:00-16:00</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 上牧町体育館</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-primary">詳細</button>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="400">
+                            <div class="event-date">
+                                <span class="date-day">22</span>
+                                <span class="date-month">7月</span>
+                            </div>
+                            <div class="event-content">
+                                <h4>健康講座</h4>
+                                <p>専門講師による健康づくりの講座を開催します</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 14:00-15:30</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 上牧町公民館</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-primary">詳細</button>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="500">
+                            <div class="event-date">
+                                <span class="date-day">29</span>
+                                <span class="date-month">7月</span>
+                            </div>
+                            <div class="event-content">
+                                <h4>バレーボール大会</h4>
+                                <p>参加者同士の親睦を深めるバレーボール大会</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 9:00-17:00</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 上牧町体育館</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-primary">詳細</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="schedule">
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
         <div class="container">
-            <div class="section-header">
-                <h2>週間スケジュール</h2>
-                <p>あなたのライフスタイルに合わせて参加できます</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>お知らせ・ブログ</h2>
+                <p>最新の活動報告やお知らせをお届けします</p>
             </div>
-            <div class="schedule-table">
-                <div class="schedule-row schedule-header">
-                    <div class="schedule-cell">時間</div>
-                    <div class="schedule-cell">月</div>
-                    <div class="schedule-cell">火</div>
-                    <div class="schedule-cell">水</div>
-                    <div class="schedule-cell">木</div>
-                    <div class="schedule-cell">金</div>
-                    <div class="schedule-cell">土</div>
-                    <div class="schedule-cell">日</div>
-                </div>
-                <div class="schedule-row">
-                    <div class="schedule-cell time">7:00-8:30</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">ランニング</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">ウォーキング</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                </div>
-                <div class="schedule-row">
-                    <div class="schedule-cell time">10:00-11:30</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">ヨガ</div>
-                </div>
-                <div class="schedule-row">
-                    <div class="schedule-cell time">14:00-17:00</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">バレーボール</div>
-                    <div class="schedule-cell"></div>
-                </div>
-                <div class="schedule-row">
-                    <div class="schedule-cell time">19:00-21:00</div>
-                    <div class="schedule-cell activity">フィットネス</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">フィットネス</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell activity">フィットネス</div>
-                    <div class="schedule-cell"></div>
-                    <div class="schedule-cell"></div>
-                </div>
+            
+            <div class="blog-grid" data-aos="fade-up" data-aos-delay="200">
+                <article class="blog-card featured">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="夏祭り体験会の様子" loading="lazy">
+                        <div class="blog-badge">重要</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2025年7月5日</span>
+                            <span class="blog-category">イベント</span>
+                        </div>
+                        <h3>夏祭り体験会開催のお知らせ</h3>
+                        <p>7月15日（土）に上牧町体育館にて、夏祭り体験会を開催いたします。各教室の体験ができる絶好の機会です...</p>
+                        <div class="blog-tags">
+                            <span class="tag">体験会</span>
+                            <span class="tag">夏祭り</span>
+                        </div>
+                        <div class="blog-footer">
+                            <span class="read-time">読了目安: 3分</span>
+                            <a href="#" class="blog-read-more">続きを読む</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="新メンバー紹介" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2025年7月3日</span>
+                            <span class="blog-category">活動報告</span>
+                        </div>
+                        <h3>新メンバーの皆様をご紹介</h3>
+                        <p>6月に新しく入会された皆様をご紹介いたします。これからよろしくお願いします...</p>
+                        <div class="blog-footer">
+                            <span class="read-time">読了目安: 2分</span>
+                            <a href="#" class="blog-read-more">続きを読む</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="健康講座レポート" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">2025年7月1日</span>
+                            <span class="blog-category">健康情報</span>
+                        </div>
+                        <h3>6月健康講座レポート</h3>
+                        <p>先月開催した健康講座の様子をレポートします。多くの方にご参加いただき...</p>
+                        <div class="blog-footer">
+                            <span class="read-time">読了目安: 4分</span>
+                            <a href="#" class="blog-read-more">続きを読む</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta" data-aos="fade-up" data-aos-delay="400">
+                <button class="btn btn-outline">すべてのお知らせを見る</button>
             </div>
         </div>
     </section>
@@ -222,68 +599,175 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2>お問い合わせ</h2>
-                <p>お気軽にお問い合わせください</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>お問い合わせ・体験申込</h2>
+                <p>ご質問やご相談、体験のお申し込みはこちらから</p>
             </div>
-            <div class="contact-grid">
+            
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
+                <!-- Contact Info -->
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    <div class="info-card">
+                        <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="contact-details">
-                            <h3>住所</h3>
-                            <p>奈良県北葛城郡上牧町<br>上牧3000番地</p>
+                        <div class="info-content">
+                            <h3>アクセス</h3>
+                            <p>〒639-0214<br>奈良県北葛城郡上牧町上牧3000番地</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+
+                    <div class="info-card">
+                        <div class="info-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div class="contact-details">
-                            <h3>電話番号</h3>
+                        <div class="info-content">
+                            <h3>お電話</h3>
                             <p>0745-76-1234</p>
+                            <small>受付時間: 9:00-21:00</small>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+
+                    <div class="info-card">
+                        <div class="info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="contact-details">
-                            <h3>メールアドレス</h3>
+                        <div class="info-content">
+                            <h3>メール</h3>
                             <p>info@rifu-kanmaki.com</p>
+                            <small>24時間受付</small>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>営業時間</h3>
-                            <p>月〜金: 9:00 - 21:00<br>土日: 9:00 - 18:00</p>
+
+                    <!-- SNS Links -->
+                    <div class="sns-links">
+                        <h3>SNSでも情報発信中</h3>
+                        <div class="sns-buttons">
+                            <a href="#" class="sns-btn sns-line">
+                                <i class="fab fa-line"></i>
+                                <span>LINE友だち追加</span>
+                            </a>
+                            <a href="#" class="sns-btn sns-instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="sns-btn sns-facebook">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">お名前</label>
-                            <input type="text" id="name" name="name" required>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <!-- Step 1: 基本情報 -->
+                        <div class="form-step active" data-step="1">
+                            <h3>基本情報</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lastName">姓 <span class="required">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName">名 <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lastNameKana">姓（かな） <span class="required">*</span></label>
+                                    <input type="text" id="lastNameKana" name="lastNameKana" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstNameKana">名（かな） <span class="required">*</span></label>
+                                    <input type="text" id="firstNameKana" name="firstNameKana" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">電話番号 <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">年齢</label>
+                                <select id="age" name="age">
+                                    <option value="">選択してください</option>
+                                    <option value="10代">10代</option>
+                                    <option value="20代">20代</option>
+                                    <option value="30代">30代</option>
+                                    <option value="40代">40代</option>
+                                    <option value="50代">50代</option>
+                                    <option value="60代">60代</option>
+                                    <option value="70代以上">70代以上</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <!-- Step 2: お問い合わせ内容 -->
+                        <div class="form-step" data-step="2">
+                            <h3>お問い合わせ内容</h3>
+                            <div class="form-group">
+                                <label for="inquiry-type">お問い合わせの種類 <span class="required">*</span></label>
+                                <select id="inquiry-type" name="inquiryType" required>
+                                    <option value="">選択してください</option>
+                                    <option value="体験申込">体験申込</option>
+                                    <option value="入会について">入会について</option>
+                                    <option value="教室について">教室について</option>
+                                    <option value="イベントについて">イベントについて</option>
+                                    <option value="その他">その他</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="class-selection" style="display: none;">
+                                <label for="interested-class">興味のある教室</label>
+                                <select id="interested-class" name="interestedClass">
+                                    <option value="">選択してください</option>
+                                    <option value="ランニング・ウォーキング">ランニング・ウォーキング</option>
+                                    <option value="フィットネス">フィットネス</option>
+                                    <option value="バレーボール">バレーボール</option>
+                                    <option value="ヨガ・ストレッチ">ヨガ・ストレッチ</option>
+                                    <option value="キッズ体操">キッズ体操</option>
+                                    <option value="シニア健康教室">シニア健康教室</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="ご質問やご要望など、お気軽にお書きください"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone">
+
+                        <!-- Step 3: 確認 -->
+                        <div class="form-step" data-step="3">
+                            <h3>入力内容の確認</h3>
+                            <div class="confirmation-content">
+                                <!-- 確認内容がJavaScriptで動的に表示されます -->
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy-agreement" name="privacyAgreement" required>
+                                    <span class="checkmark"></span>
+                                    <a href="#" class="privacy-link">プライバシーポリシー</a>に同意します
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <!-- Form Navigation -->
+                        <div class="form-navigation">
+                            <div class="step-indicator">
+                                <div class="step active" data-step="1">1</div>
+                                <div class="step" data-step="2">2</div>
+                                <div class="step" data-step="3">3</div>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline" id="prev-step" style="display: none;">戻る</button>
+                                <button type="button" class="btn btn-primary" id="next-step">次へ</button>
+                                <button type="submit" class="btn btn-primary" id="submit-form" style="display: none;">送信する</button>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">送信する</button>
                     </form>
                 </div>
             </div>
@@ -291,35 +775,75 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>里風総合型クラブ上牧</h3>
-                    <p>健康で活力ある地域づくりを目指して、地域の皆様に愛されるスポーツクラブです。</p>
+                    <div class="footer-logo">
+                        <h3>里風総合型クラブ上牧</h3>
+                        <p>健康で活力ある地域づくりを目指して</p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 奈良県北葛城郡上牧町上牧3000番地</p>
+                        <p><i class="fas fa-phone"></i> 0745-76-1234</p>
+                        <p><i class="fas fa-envelope"></i> info@rifu-kanmaki.com</p>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>リンク</h3>
-                    <ul>
+                    <h4>サイトマップ</h4>
+                    <ul class="footer-links">
                         <li><a href="#home">ホーム</a></li>
-                        <li><a href="#about">クラブについて</a></li>
-                        <li><a href="#activities">活動内容</a></li>
+                        <li><a href="#classes">教室案内</a></li>
+                        <li><a href="#events">イベント</a></li>
+                        <li><a href="#blog">お知らせ</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>お問い合わせ</h3>
-                    <p><i class="fas fa-phone"></i> 0745-76-1234</p>
-                    <p><i class="fas fa-envelope"></i> info@rifu-kanmaki.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 奈良県北葛城郡上牧町</p>
+                    <h4>教室一覧</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">ランニング・ウォーキング</a></li>
+                        <li><a href="#">フィットネス</a></li>
+                        <li><a href="#">バレーボール</a></li>
+                        <li><a href="#">ヨガ・ストレッチ</a></li>
+                        <li><a href="#">キッズ体操</a></li>
+                        <li><a href="#">シニア健康教室</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>フォローする</h4>
+                    <div class="footer-sns">
+                        <a href="#" class="sns-link" aria-label="LINE"><i class="fab fa-line"></i></a>
+                        <a href="#" class="sns-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sns-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="sns-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="footer-policies">
+                        <a href="#">プライバシーポリシー</a>
+                        <a href="#">利用規約</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 里風総合型クラブ上牧. All rights reserved.</p>
+                <p>&copy; 2025 里風総合型クラブ上牧. All rights reserved.</p>
+                <p class="footer-update">最終更新: 2025年7月7日</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="ページトップに戻る">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="script.js"></script>
 </body>
 </html>
