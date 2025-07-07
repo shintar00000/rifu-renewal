@@ -119,45 +119,319 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  overflow: hidden;
 }
 
 .loading-content {
   text-align: center;
   color: var(--color-white);
+  z-index: 2;
+  position: relative;
 }
 
-.loading-logo h1 {
-  font-size: 3rem;
+/* ロゴアニメーション */
+.loading-logo {
+  margin-bottom: var(--space-8);
+}
+
+.logo-animate {
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: var(--space-2);
-  animation: fadeInUp 1s ease-out;
+  background: linear-gradient(45deg, var(--color-white), var(--color-accent), var(--color-white));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: logoShine 2s ease-in-out infinite, logoFloat 3s ease-in-out infinite;
 }
 
-.loading-logo span {
+.logo-subtitle {
   font-family: var(--font-satoshi);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  letter-spacing: 0.2em;
-  opacity: 0.8;
-}
-
-.loading-spinner {
-  margin: var(--space-8) 0;
-}
-
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid var(--color-white);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-.loading-screen p {
-  font-size: 1.1rem;
+  letter-spacing: 0.3em;
   opacity: 0.9;
+  animation: subtitleFade 2s ease-in-out infinite alternate;
+}
+
+/* キャッチコピー */
+.loading-catchphrase {
+  margin: var(--space-8) 0;
+  font-family: var(--font-primary);
+}
+
+.catchphrase-text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+  opacity: 0;
+  animation: catchphraseSlideIn 1.5s ease-out 0.5s forwards;
+}
+
+.catchphrase-thanks {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  opacity: 0;
+  animation: catchphraseSlideIn 1.5s ease-out 1s forwards, thanksGlow 2s ease-in-out 2s infinite;
+}
+
+/* カッコいいローディングアニメーション */
+.loading-animation {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: var(--space-8) auto;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: pulseRing 2s ease-out infinite;
+}
+
+.pulse-ring-1 {
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+
+.pulse-ring-2 {
+  width: 80px;
+  height: 80px;
+  animation-delay: 0.3s;
+}
+
+.pulse-ring-3 {
+  width: 100px;
+  height: 100px;
+  animation-delay: 0.6s;
+}
+
+.loading-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  animation: iconRotate 2s linear infinite, iconBounce 1s ease-in-out infinite alternate;
+  backdrop-filter: blur(10px);
+}
+
+/* プログレスバー */
+.loading-progress {
+  margin-top: var(--space-8);
+}
+
+.progress-bar {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-4);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-white), var(--color-accent), var(--color-white));
+  background-size: 200% 100%;
+  border-radius: var(--radius-full);
+  width: 0%;
+  transition: width 0.3s ease;
+  animation: progressShine 1.5s ease-in-out infinite;
+}
+
+.loading-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+/* 背景パーティクル */
+.loading-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: particleFloat 4s linear infinite;
+}
+
+.particle:nth-child(1) {
+  left: 10%;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  left: 20%;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+  left: 60%;
+  animation-duration: 3.5s;
+  animation-delay: 0.5s;
+}
+
+.particle:nth-child(5) {
+  left: 80%;
+  animation-duration: 4.5s;
+  animation-delay: 1.5s;
+}
+
+.particle:nth-child(6) {
+  left: 90%;
+  animation-duration: 6s;
+  animation-delay: 2.5s;
+}
+
+/* Loading Animations */
+@keyframes logoShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes subtitleFade {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes catchphraseSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes thanksGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 216, 77, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 216, 77, 0.8), 0 0 30px rgba(255, 216, 77, 0.6);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes iconRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes iconBounce {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes progressShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Particle Background */

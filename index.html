@@ -60,13 +60,43 @@
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <h1>里風</h1>
-                <span>RIFU</span>
+                <h1 class="logo-animate">里風</h1>
+                <span class="logo-subtitle">RIFU</span>
             </div>
-            <div class="loading-spinner">
-                <div class="spinner"></div>
+            
+            <!-- キャッチコピー -->
+            <div class="loading-catchphrase">
+                <span class="catchphrase-text">今日のキロクに</span>
+                <span class="catchphrase-thanks">ありがとう</span>
             </div>
-            <p>読み込み中...</p>
+            
+            <!-- カッコいいローディングアニメーション -->
+            <div class="loading-animation">
+                <div class="pulse-ring pulse-ring-1"></div>
+                <div class="pulse-ring pulse-ring-2"></div>
+                <div class="pulse-ring pulse-ring-3"></div>
+                <div class="loading-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+            </div>
+            
+            <!-- プログレスバー -->
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="loading-text" id="loading-text">サイトを準備中...</p>
+            </div>
+        </div>
+        
+        <!-- 背景パーティクル -->
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
     </div>
 

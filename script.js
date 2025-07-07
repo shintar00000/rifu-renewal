@@ -29,17 +29,57 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===== Loading Screen =====
 function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
+    const progressFill = document.getElementById('progress-fill');
+    const loadingText = document.getElementById('loading-text');
     
     if (loadingScreen) {
-        // Simulate loading time
-        setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
-            
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 2000);
+        // Enhanced loading with progress animation
+        const loadingSteps = [
+            { text: 'サイトを準備中...', progress: 0 },
+            { text: 'スタイルを読み込み中...', progress: 25 },
+            { text: 'コンテンツを取得中...', progress: 50 },
+            { text: '最適化中...', progress: 75 },
+            { text: '完了！', progress: 100 }
+        ];
+        
+        let currentStep = 0;
+        const stepDuration = 300; // Each step takes 300ms
+        
+        function updateLoadingProgress() {
+            if (currentStep < loadingSteps.length) {
+                const step = loadingSteps[currentStep];
+                
+                // Update progress bar
+                if (progressFill) {
+                    progressFill.style.width = `${step.progress}%`;
+                }
+                
+                // Update loading text
+                if (loadingText) {
+                    loadingText.textContent = step.text;
+                }
+                
+                currentStep++;
+                
+                // Continue to next step
+                if (currentStep < loadingSteps.length) {
+                    setTimeout(updateLoadingProgress, stepDuration);
+                } else {
+                    // Loading complete - fade out
+                    setTimeout(() => {
+                        loadingScreen.style.opacity = '0';
+                        loadingScreen.style.visibility = 'hidden';
+                        
+                        setTimeout(() => {
+                            loadingScreen.style.display = 'none';
+                        }, 500);
+                    }, 300);
+                }
+            }
+        }
+        
+        // Start loading animation
+        updateLoadingProgress();
     }
 }
 
